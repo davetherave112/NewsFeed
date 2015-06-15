@@ -10,13 +10,14 @@ import UIKit
 
 class NFArticle: NSObject {
     
-    enum articleType {
+   internal enum articleType {
         case News, Blog //News by default
     }
     
     var articleTitle = String()
     var articleDate = NSDate()
-    var type = articleType.News
+    var type = String()
+    //var type = articleType.News
     var articleAuthor = String()
     var articleText = String()
     var articleThumbnail = UIImage()

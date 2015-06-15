@@ -63,22 +63,24 @@ class FeedViewController : UIViewController, UITableViewDelegate, UITableViewDat
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "M/d/yyyy"
-        cell.textLabel?.text = dateFormatter.stringFromDate(feed.feedArray[indexPath.row].articleDate)
         
+        var combo = feed.feedArray[indexPath.row].type  + "\n" + dateFormatter.stringFromDate(feed.feedArray[indexPath.row].articleDate)
+
+        cell.textLabel?.text = combo
+        
+        /*
         let blogImage = UIImage(named: "blog_128.png")
         let newsImage = UIImage(named: "Newspaper_128.png")
         
-        // simulate some articles as blog posts, come news articles:
-        let coinToss = Int(arc4random_uniform(2))
-        if (coinToss == 1)
-        {
-            cell.imageView?.image = blogImage
-        }
-        else
+        if (feed.feedArray[indexPath.row].type == "News")
         {
             cell.imageView?.image = newsImage
         }
-        
+        else
+        {
+            cell.imageView?.image = blogImage
+        }
+        */
         
         return cell
     }
@@ -112,6 +114,7 @@ class FeedViewController : UIViewController, UITableViewDelegate, UITableViewDat
     }
     */
     func refresh() {
+        feed = NFFeed()
         feed.updateFeed(self)
         refreshControl.endRefreshing()
         feedTable.reloadData()

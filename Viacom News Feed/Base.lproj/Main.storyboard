@@ -26,7 +26,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d2K-Nk-cku" id="ZD7-Dx-BTJ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UFM-S8-Xeb">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UFM-S8-Xeb">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -131,6 +131,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k6Y-HJ-LRs" firstAttribute="top" secondItem="iCb-9x-mhQ" secondAttribute="bottom" constant="24" id="93c-wo-9aF"/>
+                            <constraint firstAttribute="centerX" secondItem="k6Y-HJ-LRs" secondAttribute="centerX" id="H9T-9c-UAP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mbb-a4-B4U" secondAttribute="trailing" constant="30" id="QJ2-44-WDL"/>
                             <constraint firstItem="k6Y-HJ-LRs" firstAttribute="leading" secondItem="yqI-3d-GFb" secondAttribute="leadingMargin" constant="165" id="RR2-LR-Dth"/>
                             <constraint firstAttribute="centerY" secondItem="k6Y-HJ-LRs" secondAttribute="centerY" id="VNt-aj-8Nr"/>
