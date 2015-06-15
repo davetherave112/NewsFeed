@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Viacom News Feed/NFFeed.swift"
-            timestampString = "456036384.306925"
+            timestampString = "456079150.489981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "updateFeed(_:)"
             landmarkType = "5">
          </BreakpointContent>

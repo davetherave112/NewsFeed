@@ -97,22 +97,7 @@ class FeedViewController : UIViewController, UITableViewDelegate, UITableViewDat
         self.navigationController?.pushViewController(dvc, animated: true)
 
     }
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if (segue.identifier == "Article Selected")
-        {
-            let indexPath = feedTable.indexPathForSelectedRow()
-            var dvc = segue.destinationViewController as! DetailViewController
-            dvc.articleTitle = feed.feedArray[indexPath!.row].articleTitle
-            dvc.articleAuthor = feed.feedArray[indexPath!.row].articleAuthor
-            dvc.articleText = feed.feedArray[indexPath!.row].articleText
-            dvc.articleDate = feed.feedArray[indexPath!.row].articleDate
-
-        }
     
-    }
-    */
     func refresh() {
         feed = NFFeed()
         feed.updateFeed(self)

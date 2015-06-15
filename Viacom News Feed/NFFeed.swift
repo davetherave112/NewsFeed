@@ -40,63 +40,42 @@ class NFFeed: NSObject {
             {
                 var JSONData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
                 var results = JSONData.valueForKey("results") as! NSArray
+                
 
-                for each in results {
-                    let article = NFArticle()
-
-                    article.articleAuthor = each.valueForKey("byline") as! String
-                    article.articleTitle = each.valueForKey("title") as! String
-                    article.articleText = each.valueForKey("abstract") as! String
-                    
-                    article.type = each.valueForKey("item_type") as! String
-                    
-                    
-                    var dateNSString = each.valueForKey("created_date") as! NSString
-                    let range : NSRange = NSRange(location: 0, length: 5)
-                    dateNSString.stringByReplacingCharactersInRange(range, withString: "")
-                    let dateString = dateNSString as String
-                    
-                    let dateFormatter = NSDateFormatter()
-                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-
-                    article.articleDate = dateFormatter.dateFromString(dateString)!
-                    
-                    self.feedArray.append(article)
-                    /*
-                    var JSONData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-                    var responseData = JSONData.valueForKey("responseData") as! NSDictionary
-                    var feed = responseData.valueForKey("feed") as! NSDictionary
-                    var entries = feed.valueForKey("entries") as! NSArray
-                    
-                    //var article = NFArticle()
-                    
-                    for each in entries {
+                // only load articles if we have any new ones, i.e. when the last article is no longer in the feed
+                //if ((self.feedArray[19] != nil) && (self.feedArray[19].articleTitle != (results[19].valueForKey("title") as! String)))
+                //{
+                
+                    for each in results {
                         let article = NFArticle()
-                        
-                        article.articleAuthor = each.valueForKey("author") as! String
+
+                        article.articleAuthor = each.valueForKey("byline") as! String
                         article.articleTitle = each.valueForKey("title") as! String
-                        article.articleText = each.valueForKey("contentSnippet") as! String
-                        
-                        
-                        var dateNSString = each.valueForKey("publishedDate") as! NSString
+                        article.articleText = each.valueForKey("abstract") as! String
+                    
+                        article.type = each.valueForKey("item_type") as! String
+                    
+                    
+                        var dateNSString = each.valueForKey("created_date") as! NSString
                         let range : NSRange = NSRange(location: 0, length: 5)
                         dateNSString.stringByReplacingCharactersInRange(range, withString: "")
                         let dateString = dateNSString as String
-                        
+                    
                         let dateFormatter = NSDateFormatter()
-                        dateFormatter.dateFormat = "ccc, dd MMM yyyy HH:mm:ss Z"
+                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+
                         article.articleDate = dateFormatter.dateFromString(dateString)!
-                        
+                    
                         self.feedArray.append(article)
-                        */
-                }
+                                    }
                 
-                dispatch_async(dispatch_get_main_queue(), {
-                    
-                    tableVC.feedTable.reloadData()
-                    
-                    return
-                })
+                    dispatch_async(dispatch_get_main_queue(), {
+                        
+                        tableVC.feedTable.reloadData()
+                        
+                        return
+                    })
+                //}
             }
             
         }

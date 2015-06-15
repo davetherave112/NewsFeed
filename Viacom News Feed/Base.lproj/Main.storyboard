@@ -162,33 +162,6 @@
             </objects>
             <point key="canvasLocation" x="2833" y="400"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="QBt-AC-OvH">
-            <objects>
-                <viewController storyboardIdentifier="WebVC" id="0pC-18-YvH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ecQ-vz-sJb"/>
-                        <viewControllerLayoutGuide type="bottom" id="BzM-AU-f9o"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OYU-iR-U5Z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AtQ-dO-XMy">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="delegate" destination="0pC-18-YvH" id="2gX-4s-Jw1"/>
-                                </connections>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Dn-eC-7K0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2833" y="1116"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Ft-PZ-bFm">
             <objects>
