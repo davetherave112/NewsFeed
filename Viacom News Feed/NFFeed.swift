@@ -59,7 +59,7 @@ class NFFeed: NSObject {
                 dispatch_async(dispatch_get_main_queue(), {
                     
                     var tablevc = sender as! FeedViewController
-                    tablevc.refresh()
+                    tablevc.feedTable.reloadData()
                     
                     return
                 })

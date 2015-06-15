@@ -10,23 +10,40 @@ import UIKit
 
 class FeedViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var feedTable: UITableView!
+    @IBOutlet weak var splashImage: UIImageView!
     
     var feed = NFFeed()
-    
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
+        
+        splashImage.image = UIImage(named: "splash image2.gif")
+        
+        var splashTimer = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: "removeSplash", userInfo: nil, repeats: false)
+        
+
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func removeSplash() {
+        
+        splashImage.hidden = true
         
         title = "News Feed"
         
         feed.updateFeed(self)
         
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        refreshControl.addTarget(self, action: Selector("refresh"), forControlEvents: UIControlEvents.ValueChanged)
+        //refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        
+        feedTable.addSubview(self.refreshControl)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,7 +77,6 @@ class FeedViewController : UIViewController, UITableViewDelegate, UITableViewDat
         else
         {
             cell.imageView?.image = newsImage
-
         }
         
         
@@ -96,9 +112,10 @@ class FeedViewController : UIViewController, UITableViewDelegate, UITableViewDat
     }
     */
     func refresh() {
+        feed.updateFeed(self)
+        refreshControl.endRefreshing()
         feedTable.reloadData()
     }
-    
 
 }
 
