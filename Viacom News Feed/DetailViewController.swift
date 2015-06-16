@@ -9,12 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITextViewDelegate {
-    /*
-    var articleTitle = String()
-    var articleAuthor = String()
-    var articleText = String()
-    var articleDate = NSDate()
-    */
+    
     var articleData = NSDictionary()
 
     
@@ -25,16 +20,6 @@ class DetailViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*
-        titleLabel.text = articleTitle
-        authorLabel.text = articleAuthor
-        textView.text = articleText
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMM d, yyyy"
-        dateLabel.text = dateFormatter.stringFromDate(articleDate)
-        */
         
         titleLabel.text = articleData.valueForKey("title") as? String
         authorLabel.text = articleData.valueForKey("byline") as? String

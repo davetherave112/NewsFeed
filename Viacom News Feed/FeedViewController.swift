@@ -69,27 +69,10 @@ class FeedViewController : UIViewController, UITableViewDelegate, UITableViewDat
         let outputDateFormatter = NSDateFormatter()
         outputDateFormatter.dateFormat = "M/d/yyyy"
         
-        //var combo = feed.feedArray[indexPath.row].type  + "\n" + dateFormatter.stringFromDate(feed.feedArray[indexPath.row].articleDate)
-        
         
         let inputDate = inputDateFormatter.dateFromString(articleData.valueForKey("created_date") as! String)
         let outputDate = outputDateFormatter.stringFromDate(inputDate!) as String
         cell.textLabel?.text = articleData.valueForKey("item_type") as! String + "\n" + outputDate
-
-        
-        /*
-        let blogImage = UIImage(named: "blog_128.png")
-        let newsImage = UIImage(named: "Newspaper_128.png")
-        
-        if (feed.feedArray[indexPath.row].type == "News")
-        {
-            cell.imageView?.image = newsImage
-        }
-        else
-        {
-            cell.imageView?.image = blogImage
-        }
-        */
         
         return cell
     }
@@ -99,19 +82,12 @@ class FeedViewController : UIViewController, UITableViewDelegate, UITableViewDat
         feedTable.deselectRowAtIndexPath(indexPath, animated: true)
         
         var dvc = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
-        /*
-        dvc.articleTitle = feed.feedArray[indexPath.row].articleTitle
-        dvc.articleAuthor = feed.feedArray[indexPath.row].articleAuthor
-        dvc.articleText = feed.feedArray[indexPath.row].articleText
-        dvc.articleDate = feed.feedArray[indexPath.row].articleDate
-        */
         dvc.articleData = feed.feedArray[indexPath.row].articleData
         self.navigationController?.pushViewController(dvc, animated: true)
 
     }
     
     func refresh() {
-        //feed = NFFeed()
         feed.updateFeed(self)
         refreshControl.endRefreshing()
         feedTable.reloadData()
