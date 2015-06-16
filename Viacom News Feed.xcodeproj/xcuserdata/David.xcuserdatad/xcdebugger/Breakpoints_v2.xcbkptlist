@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Viacom News Feed/NFFeed.swift"
-            timestampString = "456036384.306925"
+            timestampString = "456121578.001885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "updateFeed(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,169 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Viacom News Feed/NFFeed.swift"
-            timestampString = "456079150.489981"
+            timestampString = "456122609.330134"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "updateFeed(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viacom News Feed/NFArticle.swift"
+            timestampString = "456092208.425386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "NFArticle"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viacom News Feed/DetailViewController.swift"
+            timestampString = "456112698.249848"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viacom News Feed/NFFeed.swift"
+            timestampString = "456121753.639159"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "updateFeed(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viacom News Feed/NFFeed.swift"
+            timestampString = "456121753.639159"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "updateFeed(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viacom News Feed/NFFeed.swift"
+            timestampString = "456121542.44113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "NFFeed"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Viacom_News_Feed.NFFeed.feedURL.getter : Swift.Optional&lt;ObjectiveC.NSURL&gt;"
+                  moduleName = "Viacom News Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/David/Documents/Apps/Viacom%20News%20Feed/Viacom%20News%20Feed/NFFeed.swift"
+                  timestampString = "456121542.445163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Viacom_News_Feed.NFFeed.feedURL.setter : Swift.Optional&lt;ObjectiveC.NSURL&gt;"
+                  moduleName = "Viacom News Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/David/Documents/Apps/Viacom%20News%20Feed/Viacom%20News%20Feed/NFFeed.swift"
+                  timestampString = "456121542.445464"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Viacom_News_Feed.NFFeed.feedURL.materializeForSet : Swift.Optional&lt;ObjectiveC.NSURL&gt;"
+                  moduleName = "Viacom News Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/David/Documents/Apps/Viacom%20News%20Feed/Viacom%20News%20Feed/NFFeed.swift"
+                  timestampString = "456121542.445681"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Viacom_News_Feed.NFFeed.init (Viacom_News_Feed.NFFeed.Type)() -&gt; Viacom_News_Feed.NFFeed"
+                  moduleName = "Viacom News Feed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/David/Documents/Apps/Viacom%20News%20Feed/Viacom%20News%20Feed/NFFeed.swift"
+                  timestampString = "456121542.445933"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Viacom News Feed/NFFeed.swift"
+            timestampString = "456122609.330134"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "updateFeed(_:)"
             landmarkType = "5">
          </BreakpointContent>

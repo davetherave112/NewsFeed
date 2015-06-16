@@ -23,5 +23,7 @@ class NFArticle: NSObject {
     var articleThumbnail = UIImage()
     
     
+    var articleData = NSDictionary()
+    
    
 }

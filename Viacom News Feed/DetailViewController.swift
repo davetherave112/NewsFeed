@@ -9,11 +9,13 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITextViewDelegate {
-    
+    /*
     var articleTitle = String()
     var articleAuthor = String()
     var articleText = String()
     var articleDate = NSDate()
+    */
+    var articleData = NSDictionary()
 
     
     @IBOutlet weak var textView: UITextView!
@@ -24,6 +26,7 @@ class DetailViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
         titleLabel.text = articleTitle
         authorLabel.text = articleAuthor
         textView.text = articleText
@@ -31,7 +34,22 @@ class DetailViewController: UIViewController, UITextViewDelegate {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
         dateLabel.text = dateFormatter.stringFromDate(articleDate)
-
+        */
+        
+        titleLabel.text = articleData.valueForKey("title") as? String
+        authorLabel.text = articleData.valueForKey("byline") as? String
+        textView.text = articleData.valueForKey("abstract") as? String
+        
+        
+        let inputDateFormatter = NSDateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let outputDateFormatter = NSDateFormatter()
+        outputDateFormatter.dateFormat = "MMM d, yyyy"
+        
+        let inputDate = inputDateFormatter.dateFromString(articleData.valueForKey("created_date") as! String)
+        let outputDate = outputDateFormatter.stringFromDate(inputDate!) as String
+        
+        dateLabel.text = outputDate
 
         // Do any additional setup after loading the view.
     }
